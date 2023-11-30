@@ -16,7 +16,8 @@ Add this to your `.pre-commit-config.yaml`:
 
 This will run `bean-format` to all `.bean` and `.beancount` files
  
-If you plan to use a different extension, you can pass a custom using the files parameters.
+If you plan to use a different extension, you can pass a custom `files` using the files field.
+
 For example, we have files with extension `.count`:
 
 ```yaml
@@ -28,7 +29,8 @@ For example, we have files with extension `.count`:
 ```
 
 If you want to pin a certain version of `beancount` or other dependencies, you can add `additional_dependencies` field
-For example: 
+
+For example, we want to pin `beancount` to certain version: 
 ```yaml
 - repo: https://github.com/jtmiclat/pre-commit-bean-format
   rev: master # replace with commit sha
@@ -37,7 +39,9 @@ For example:
       additional_dependencies: ['beancount==2.3.6']
 ```
 
-If you want to pass additional arguments to format
+If you want to pass additional arguments to format, you can add `args` field
+
+For example: 
 ```yaml
 - repo: https://github.com/jtmiclat/pre-commit-bean-format
   rev: master # replace with commit sha
