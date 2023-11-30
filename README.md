@@ -9,6 +9,7 @@ Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: https://github.com/jtmiclat/pre-commit-bean-format
+  rev: master # replace with commit sha
   hooks:
     - id: bean-format
 ```
@@ -20,6 +21,7 @@ For example, we have files with extension `.count`:
 
 ```yaml
 - repo: https://github.com/jtmiclat/pre-commit-bean-format
+  rev: master # replace with commit sha
   hooks:
     - id: bean-format
       files: \.count$
@@ -29,6 +31,7 @@ If you want to pin a certain version of `beancount` or other dependencies, you c
 For example: 
 ```yaml
 - repo: https://github.com/jtmiclat/pre-commit-bean-format
+  rev: master # replace with commit sha
   hooks:
     - id: bean-format
       additional_dependencies: ['beancount==2.3.6']
@@ -37,6 +40,7 @@ For example:
 If you want to pass additional arguments to format
 ```yaml
 - repo: https://github.com/jtmiclat/pre-commit-bean-format
+  rev: master # replace with commit sha
   hooks:
     - id: bean-format
       args: [--w=100]
